@@ -1,6 +1,8 @@
 package clases;
 
-public class Triangle extends GeometricFigure{
+import interfaces.IShape;
+
+public class Triangle extends GeometricFigure implements IShape {
   private Point point1;
   private Point point2;
   private Point point3;
@@ -62,6 +64,29 @@ public class Triangle extends GeometricFigure{
       }catch(Exception e){
           return (double)0;
       }
+  }
+
+  public Double getPerimeter() {
+    try{
+        Double l1;
+        Double l2;
+        Double l3;
+        
+        l1 = point1.getDistance(point2);
+        l2 = point2.getDistance(point3);
+        l3 = point2.getDistance(point1);
+        
+        //Aplicando la formula de Heron
+        
+        Double s = (l1 + l2 + l3) / 2;
+        
+        Double perimeter = s * 3;
+        
+        return perimeter;
+        
+    }catch(Exception e){
+        return (double)0;
+    }
   }
 
   @Override

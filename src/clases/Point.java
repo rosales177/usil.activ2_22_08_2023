@@ -45,4 +45,25 @@ public class Point {
     public String toString(){
         return "(" + this.getX() + "," + this.getY() + ")";
     }
+
+    public Point calculateClosestPoint(Point[] othersPoints){
+        Point _point = null;
+
+        double minDistance = Double.MAX_VALUE;
+        double currentDistance;
+
+        for(int i = 0; i < othersPoints.length; i ++)
+        {
+            currentDistance = this.getDistance(othersPoints[i]);
+            if(currentDistance < minDistance){
+                minDistance = currentDistance;
+                _point = othersPoints[i];
+            }
+        }
+
+        return _point;
+    }
+
+    
+
 }
