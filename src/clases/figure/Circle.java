@@ -1,9 +1,10 @@
 package clases.figure;
 
-import clases.GeometricFigure;
-import clases.Point;
+import clases.base.GeometricFigure;
+import clases.base.Point;
+import interfaces.IShape;
 
-public class Circle extends GeometricFigure {
+public class Circle extends GeometricFigure implements IShape {
     private Point center;
     private int radius;
 
@@ -27,8 +28,17 @@ public class Circle extends GeometricFigure {
 
     @Override
     public String toString(){
-        return "Circle: " + name + ", center: " + center + ", radius: " + radius;
+        return "Circle: {" + 
+        "\n\tNombre: " + name + 
+        "\n\tCentro: " + center + 
+        "\n\tRadio: " + radius + 
+        "\n\tArea: " + this.CalculateArea() +
+        "\n}";
     }
 
+
+    public Double getPerimeter(){
+        return (2*Math.PI) * this.radius;
+    }
 
 }

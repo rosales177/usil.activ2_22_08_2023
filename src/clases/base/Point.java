@@ -1,4 +1,4 @@
-package clases;
+package clases.base;
 
 public class Point {
   private double x;

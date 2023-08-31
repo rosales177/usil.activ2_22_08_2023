@@ -1,7 +1,4 @@
-package clases.figure;
-
-import clases.GeometricFigure;
-import clases.Point;
+package clases.base;
 
 public abstract class Quadrilateral extends GeometricFigure{
 
@@ -54,10 +51,10 @@ public abstract class Quadrilateral extends GeometricFigure{
     @Override
     public String toString() {
         return "Quadrilateral{" +
-                "p1=" + p1 +
-                ", p2=" + p2 +
-                ", p3=" + p3 +
-                ", p4=" + p4 +
+                "p1=(" + p1.getX() + "," + p1.getY() + ")," +
+                "p2=(" + p2.getX() + "," + p2.getY() + ")," +
+                "p3=(" + p3.getX() + "," + p3.getY() + ")," +
+                "p4=(" + p4.getX() + "," + p4.getY() + ")" +
                 '}';
     }
     

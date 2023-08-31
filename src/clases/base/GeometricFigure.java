@@ -1,4 +1,4 @@
-package clases;
+package clases.base;
 
 public abstract class GeometricFigure {
   protected String name;

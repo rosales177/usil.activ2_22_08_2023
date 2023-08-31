@@ -1,5 +1,7 @@
-package clases;
+package clases.figure;
 
+import clases.base.GeometricFigure;
+import clases.base.Point;
 import interfaces.IShape;
 
 public class Triangle extends GeometricFigure implements IShape {
@@ -109,6 +111,13 @@ public class Triangle extends GeometricFigure implements IShape {
   }
 
   public String toString(){
-      return "Triangle: "+ getName() +"\nPuntos: "+ getPoint1().toString() +","+ getPoint2().toString() + "," + getPoint3().toString() + "\nArea: " + CalculateArea() + "\nRegular: " + (isRegular()==true?"Es regular":"No es regular");
+      return "Triangulo: { "+ 
+        "\n\tNombre: " + getName() +
+        "\n\tPuntos: "+ getPoint1().toString() + "," +
+        "\n\tPuntos: "+ getPoint2().toString() + "," +
+        "\n\tPuntos: " + getPoint3().toString() + "," + 
+        "\n\tArea: " + CalculateArea() + 
+        "\n\tRegular: " + (isRegular()==true?"Es regular":"No es regular") +
+        "\n}";
   }
 }
